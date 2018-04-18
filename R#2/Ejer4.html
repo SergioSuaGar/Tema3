@@ -1,0 +1,46 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <script type="text/javascript" src="Ejer3.js"></script>
+  <script>
+    var objetoAgenda=new Agenda();
+    objetoAgenda.inicializarAgendaEjemplos();
+    function Añadir(){
+      var nombre = prompt("Introduce un nombre","");
+      var direccion = prompt("Introduce un direccion","");
+      var telefono = prompt("Introduce un telefono","");
+      var email = prompt("Introduce un email","");
+    }
+    function mostrarContactoBoton(){
+      var nombre = prompt("Introduce un nombre","");
+      objetoAgenda.mostrarContacto(nombre);
+    }
+    function mostrarTodosBoton(){
+      objetoAgenda.mostrarTodos();
+    }
+    function borrarContacto(){
+      objetoAgenda.borrarContacto()
+    }
+
+  </script>
+</head>
+<body>
+  <header>
+    <h1>AGENDA DE SERGIO</h1>
+  </header>
+  <section>
+    <h2>LISTADO</h2>
+
+
+  </section>
+  <nav>
+    <button onclick="Añadir()">Añadir contacto</button>
+    <button onclick="mostrarContactoBoton()">Mostrar contacto</button>
+    <button onclick="mostrarTodosBoton()">Mostrar todos los contactos</button>
+    <button onclick="mostrarContacto()">Borrar contacto</button>
+  </nav>
+  <div>
+  </div>
+
+</body>
+</html>

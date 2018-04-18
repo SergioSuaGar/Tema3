@@ -1,0 +1,17 @@
+<html>
+<head></head>
+<body>
+  <script>
+    var arrayParam = new Array(1,2,3,4);
+    var resultado=0;
+    function suma(arrayParam){
+      for(let i=0;i<arrayParam.length;i++){
+        resultado += arrayParam[i];
+        document.write(resultado+"<br>");
+      }
+    return resultado;
+    }
+    window.onload = suma(arrayParam);
+  </script>
+</body>
+</html>

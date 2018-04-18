@@ -1,0 +1,37 @@
+<html>
+<head></head>
+<body>
+  <button onclick="lanzamientoAuxiliar()">Lanzar dado</button>
+  <script>
+    var num1=0;
+    var num2=0;
+    var num3=0;
+    var num4=0;
+    var num5=0;
+    var num6=0;
+    function lanzamientoAuxiliar(){
+      for(let i=0;i<6000;i++){
+        numeroResultado = lanzamiento();
+        if(numeroResultado==1){
+          num1++;
+        }else if (numeroResultado==2) {
+          num2++;
+        }else if (numeroResultado==3) {
+          num3++;
+        }else if (numeroResultado==4) {
+          num4++;
+        }else if (numeroResultado==5) {
+          num5++;
+        }else {
+          num6++;
+        }
+      }
+      document.write("El numero 1 ha salido: "+num1+" veces"+"<br>"+"El numero 2 ha salido: "+num2+" veces"+"<br>"+"El numero 3 ha salido: "+num3+" veces"+"<br>"+"El numero 4 ha salido: "+num4+" veces"+"<br>"+"El numero 5 ha salido: "+num5+" veces"+"<br>"+"El numero 6 ha salido: "+num6+" veces")
+    }
+    function lanzamiento(){
+      let resultado=Math.round(Math.random()*(6-1)+1);
+      return resultado;
+    }
+  </script>
+</body>
+</html>

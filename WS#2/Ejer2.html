@@ -1,0 +1,90 @@
+<html>
+  <head></head>
+  <body>
+    <script>
+      var alumno1 = new Array(5);
+      alumno1[0] = 'Sergio Suarez Garzon';
+      alumno1[1] = 20;
+      alumno1[2] = 6;
+      alumno1[3] = 8;
+      alumno1[4] = 7;
+
+      var alumno2 = new Array (5);
+      alumno2[0] = 'Francisco Javier Sanchez de la Torre';
+      alumno2[1] = 33;
+      alumno2[2] = 7;
+      alumno2[3] = 9;
+      alumno2[4] = 4;
+
+      var alumno3 = new Array (5);
+      alumno3[0] = 'Rodrigo Lizaran Molina';
+      alumno3[1] = 25;
+      alumno3[2] = 10;
+      alumno3[3] = 7;
+      alumno3[4] = 8;
+
+      var clase = new Array (3);
+      clase[0] = alumno1;
+      clase[1] = alumno2;
+      clase[2] = alumno3;
+
+      function consultarTrimestre(numEstudiante,trimestre){
+        var notaMedia=0;
+        switch (numEstudiante) {
+          case 1:
+            if(trimestre==1){
+              document.write("La nota de Sergio en el primer trimestre es "+clase[0][2]);
+              return clase[0][2];
+            }else if (trimestre==2) {
+              document.write("La nota de Sergio en el segundo trimestre es "+clase[0][3]);
+              return clase[0][3];
+            }else if (trimestre==3){
+              document.write("La nota de Sergio en el tercer trimestre es "+clase[0][4]);
+              return clase[0][4];
+            }else{
+              notaMedia = (clase[0][2]+clase[0][3]+clase[0][4])/3;
+              document.write("La nota media de Sergio es "+notaMedia);
+              return notaMedia;
+            }
+            break;
+          case 2:
+          if(trimestre==1){
+            document.write("La nota de Fran en el primer trimestre es "+clase[1][2]);
+            return clase[1][2];
+          }else if (trimestre==2) {
+            document.write("La nota de Fran en el segundo trimestre es "+clase[1][3]);
+            return clase[1][3];
+          }else if (trimestre==3){
+            document.write("La nota de Fran en el tercer trimestre es "+clase[1][4]);
+            return clase[1][4];
+          }else{
+            notaMedia = (clase[1][2]+clase[1][3]+clase[1][4])/3;
+            document.write("La nota media de Fran es "+notaMedia);
+            return notaMedia;
+          }
+          break;
+          case 3:
+          if(trimestre==1){
+            document.write("La nota de Rodri en el primer trimestre es "+clase[2][2]);
+            return clase[2][2];
+          }else if (trimestre==2) {
+            document.write("La nota de Rodri en el segundo trimestre es "+clase[2][3]);
+            return clase[2][3];
+          }else if (trimestre==3){
+            document.write("La nota de Rodri en el tercer trimestre es "+clase[2][4]);
+            return clase[2][4];
+          }else{
+            notaMedia = (clase[2][2]+clase[2][3]+clase[2][4])/3;
+            document.write("La nota media de Rodri es "+notaMedia);
+            return notaMedia;
+
+          }
+          break;
+        }
+      }
+      var numEstudiante = parseInt(prompt('Introduce el numero del alumno: '));
+      var trimestre = parseInt(prompt('Introduce el numero del trimestre: '));
+      window.onload = consultarTrimestre(numEstudiante,trimestre);
+    </script>
+  </body>
+</html>

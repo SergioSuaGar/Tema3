@@ -1,0 +1,49 @@
+<html>
+
+  <head>
+
+  </head>
+  <body>
+    <script>
+      var alumno1 = new Array(5);
+      alumno1[0] = 'Sergio Suarez Garzon';
+      alumno1[1] = 20;
+      alumno1[2] = 6;
+      alumno1[3] = 8;
+      alumno1[4] = 7;
+
+      var alumno2 = new Array (5);
+      alumno2[0] = 'Francisco Javier Sanchez de la Torre';
+      alumno2[1] = 33;
+      alumno2[2] = 7;
+      alumno2[3] = 9;
+      alumno2[4] = 4;
+
+      var alumno3 = new Array (5);
+      alumno3[0] = 'Rodrigo Lizaran Molina';
+      alumno3[1] = 25;
+      alumno3[2] = 10;
+      alumno3[3] = 7;
+      alumno3[4] = 8;
+
+      var clase = new Array (3);
+      clase[0] = alumno1;
+      clase[1] = alumno2;
+      clase[2] = alumno3;
+
+      function calcularEdadMedia (){
+        var edadMedia;
+        var contador=0;
+        var edadAux=0;
+        for (i=0;i<clase.length;i++){
+          edadAux += clase[i][1];
+          contador++;
+        }
+        edadMedia=edadAux/contador;
+        document.write("La edad media de los alumnos es "+edadMedia);
+        return edadMedia
+      }
+      window.onload = calcularEdadMedia();
+    </script>
+  </body>
+</html>

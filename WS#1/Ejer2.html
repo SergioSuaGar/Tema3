@@ -1,0 +1,16 @@
+<html>
+<head></head>
+<body>
+  <button onclick="lanzamientoAuxiliar()">Lanzar dado</button>
+  <script>
+    function lanzamientoAuxiliar(){
+      lanzamiento();
+      document.write(lanzamiento());
+    }
+    function lanzamiento(){
+      let resultado=Math.round(Math.random()*(6-1)+1);
+      return resultado;
+    }
+  </script>
+</body>
+</html>
